@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todoworld/pages/signin.dart';
+import 'package:todoworld/pages/signup.dart';
 
 class OpeningPages extends StatefulWidget {
   const OpeningPages({super.key});
@@ -11,15 +13,22 @@ class _OpeningPagesState extends State<OpeningPages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const SizedBox(
+            height: 30,
+          ),
           Center(
             child: Image.asset(
               'assets/images/idk.jpg',
               height: 250,
               width: 250,
             ),
+          ),
+          const SizedBox(
+            height: 30,
           ),
           Expanded(
               child: Container(
@@ -57,9 +66,14 @@ class _OpeningPagesState extends State<OpeningPages> {
                       height: 30,
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.symmetric(horizontal: 30),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Signup()));
+                        },
                         child: Text(
                           "Sign-Up",
                           style: TextStyle(
@@ -76,7 +90,7 @@ class _OpeningPagesState extends State<OpeningPages> {
                             )),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -88,8 +102,8 @@ class _OpeningPagesState extends State<OpeningPages> {
                             color: Colors.black,
                           ),
                         ),
-                        SizedBox(width: 20),
-                        Text(
+                        const SizedBox(width: 20),
+                        const Text(
                           'or',
                           style: TextStyle(
                             fontSize: 30,
@@ -97,7 +111,7 @@ class _OpeningPagesState extends State<OpeningPages> {
                             color: Colors.black,
                           ),
                         ),
-                        SizedBox(width: 20),
+                        const SizedBox(width: 20),
                         Expanded(
                           child: Container(
                             height: 2,
@@ -106,24 +120,29 @@ class _OpeningPagesState extends State<OpeningPages> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Text(
+                    const Text(
                       "Do you have a Account??",
                       style: TextStyle(
                           fontSize: 30,
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Center(
                       child: OutlinedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Signin()));
+                        },
                         child: Text(
-                          "Login In..",
+                          "Log In..",
                           style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,
@@ -134,7 +153,7 @@ class _OpeningPagesState extends State<OpeningPages> {
                         style: OutlinedButton.styleFrom(
                             backgroundColor: Colors.black,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(50),
                             ),
                             fixedSize: Size(200, 49)),
                       ),

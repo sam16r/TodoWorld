@@ -4,14 +4,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+class Signin extends StatefulWidget {
+  const Signin({super.key});
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<Signin> createState() => _SigninState();
 }
 
-class _SignupState extends State<Signup> {
+class _SigninState extends State<Signin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +36,7 @@ class _SignupState extends State<Signup> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 120),
             child: Text(
-              "Sign Up",
+              "Sign In",
               style: TextStyle(
                 fontSize: 45,
                 fontWeight: FontWeight.w700,
@@ -68,7 +68,7 @@ class _SignupState extends State<Signup> {
                         textAlign: TextAlign.end,
                         "Enter Your E-mail : ",
                         style:
-                        TextStyle(fontSize: 22, color: Color(0xff733600)),
+                            TextStyle(fontSize: 22, color: Color(0xff733600)),
                       ),
                     ),
                   ),
@@ -78,13 +78,13 @@ class _SignupState extends State<Signup> {
                       textAlign: TextAlign.center,
                       maxLines: 1,
                       style:
-                      TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Color(0xfffedda8),
                         hintText: "abcxyz@gmail.com",
                         hintStyle:
-                        TextStyle(fontSize: 22, color: Color(0xff9b7f50)),
+                            TextStyle(fontSize: 22, color: Color(0xff9b7f50)),
                         labelStyle: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.w400,
@@ -111,7 +111,7 @@ class _SignupState extends State<Signup> {
                         textAlign: TextAlign.end,
                         "Enter Your Password : ",
                         style:
-                        TextStyle(fontSize: 22, color: Color(0xff733600)),
+                            TextStyle(fontSize: 22, color: Color(0xff733600)),
                       ),
                     ),
                   ),
@@ -121,7 +121,7 @@ class _SignupState extends State<Signup> {
                       textAlign: TextAlign.center,
                       maxLines: 1,
                       style:
-                      TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Color(0xfffedda8),
@@ -146,52 +146,40 @@ class _SignupState extends State<Signup> {
                     ),
                   ),
                   const SizedBox(
-                    height: 20,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 55),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        textAlign: TextAlign.end,
-                        "Confirm Your Password : ",
-                        style:
-                        TextStyle(fontSize: 22, color: Color(0xff733600)),
-                      ),
-                    ),
+                    height: 25,
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 40),
-                    child: TextFormField(
-                      textAlign: TextAlign.center,
-                      maxLines: 1,
-                      style:
-                      TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Color(0xfffedda8),
-                        hintText: "...........",
-                        hintStyle: TextStyle(
-                            fontSize: 22,
-                            color: Color(0xff9b7f50),
-                            fontWeight: FontWeight.w900),
-                        labelStyle: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w400,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(50),
-                            topRight: Radius.circular(50),
-                            bottomLeft: Radius.circular(50),
-                            bottomRight: Radius.circular(50),
+                    child: Row(
+                      children: [
+                        Spacer(),
+                        Container(
+                          width: 225,
+                          height: 33,
+                          child: Text(
+                            "Forgot Password??",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 23,
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.white,
+                            ),
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(50),
+                            border: Border.all(
+                              color: Colors.black,
+                              width: 3.0,
+                            ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 25,
                   ),
                   Center(
                     child: SizedBox(
@@ -202,7 +190,7 @@ class _SignupState extends State<Signup> {
                         label: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 70),
                           child: Text(
-                            "Submit",
+                            "Log In",
                             style: TextStyle(
                                 fontSize: 21,
                                 color: Colors.white,
@@ -223,6 +211,65 @@ class _SignupState extends State<Signup> {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 1.0,
+                          width: 150.0,
+                          color: Colors.black,
+                        ),
+                        Spacer(),
+                        Text(
+                          "or",
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          height: 1.0,
+                          width: 150.0,
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Center(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 90),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        // crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 30,
+                            height: 30,
+                            child: Image.asset("assets/images/google.png"),
+                          ),
+                          SizedBox(
+                            width: 30,
+                            height: 30,
+                            child: Image.asset("assets/images/facebook.png"),
+                          ),
+                          SizedBox(
+                            width: 30,
+                            height: 30,
+                            child: Image.asset("assets/images/linkedin.png"),
+                          )
+                        ],
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
