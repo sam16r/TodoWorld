@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todoworld/pages/home.dart';
 import 'package:todoworld/splash.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(116, 16, 25, 122)),
         useMaterial3: true,
       ),
-      home: const Splash(),
+      home: const Home(),
     );
   }
 }
